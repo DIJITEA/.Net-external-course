@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _1._1._1_Rectangle;
+using System;
+
 
 namespace Task1
 {
@@ -6,6 +8,8 @@ namespace Task1
     {
         public static void Main()
         {
+            Class1 c = new Class1();
+            Class1.test();
             int EnterArrowIndex = 0;
             int StaticMenuIndex = 0;
             char EnterArrow = (char)0017;
@@ -169,7 +173,7 @@ namespace Task1
 
         public void PositionReturn()
         {
-
+            
         }
 
     }

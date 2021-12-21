@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THE_MAGNIFICENT_TEN", "ConsoleApp1\THE_MAGNIFICENT_TEN.csproj", "{62BEDC5C-39D4-4B4E-BCCD-0AEB85618950}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THE_MAGNIFICENT_TEN", "Navigation_bar\THE_MAGNIFICENT_TEN.csproj", "{62BEDC5C-39D4-4B4E-BCCD-0AEB85618950}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1.1_Rectangle", "1.1.1_Rectangle\1.1.1_Rectangle.csproj", "{EACE729C-5503-4FD3-A5CC-9E4B406C2A3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{62BEDC5C-39D4-4B4E-BCCD-0AEB85618950}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62BEDC5C-39D4-4B4E-BCCD-0AEB85618950}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62BEDC5C-39D4-4B4E-BCCD-0AEB85618950}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EACE729C-5503-4FD3-A5CC-9E4B406C2A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EACE729C-5503-4FD3-A5CC-9E4B406C2A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EACE729C-5503-4FD3-A5CC-9E4B406C2A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EACE729C-5503-4FD3-A5CC-9E4B406C2A3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
