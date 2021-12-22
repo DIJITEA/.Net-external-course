@@ -8,8 +8,6 @@ namespace Task1
     {
         public static void Main()
         {
-            //Class1 c = new Class1();
-            //Class1.test();
             int EnterArrowIndex = 0;
             int StaticMenuIndex = 0;
             char EnterArrow = (char)0017;
@@ -99,10 +97,7 @@ namespace Task1
                     {
                         case 2:
                             Console.Clear();
-                            //SubMenu sub = new SubMenu();
-                            //string[] SubMenuTemp = sub.SubMenuStorage(StaticMenuIndex);
-                            //Console.WriteLine(SubMenuTemp[EnterArrowIndex]);
-                            
+                        
                             SubMenu SubCall = new SubMenu();
                             SubCall.ClassCall(StaticMenuIndex, EnterArrowIndex);
                             break;
