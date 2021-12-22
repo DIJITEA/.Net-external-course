@@ -36,13 +36,13 @@ namespace Task1
           
 
             switch (MenuLogicCase)
-            {
-                case 0: goto default;
+            {            
                 case 1:
                     StaticMenuIndex = EnterArrowIndex;
                     MenuLogicCase = 2;
                     EnterArrowIndex = 0;
-                    goto case 2;
+                    MainMenu(ref EnterArrowIndex, EnterArrow, ref MenuLength, ref MenuLogicCase, ref StaticMenuIndex);
+                    break;
                 case 2:                
                     SubMenu sub = new SubMenu();
                     string[] SubMenuTemp = sub.SubMenuStorage(StaticMenuIndex);
@@ -97,8 +97,6 @@ namespace Task1
 
                     switch (MenuLogicCase)
                     {
-                        case 0:
-                            goto default;
                         case 2:
                             Console.Clear();
                             SubMenu sub = new SubMenu();
