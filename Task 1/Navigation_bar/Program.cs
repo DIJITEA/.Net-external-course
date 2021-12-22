@@ -8,8 +8,8 @@ namespace Task1
     {
         public static void Main()
         {
-            Class1 c = new Class1();
-            Class1.test();
+            //Class1 c = new Class1();
+            //Class1.test();
             int EnterArrowIndex = 0;
             int StaticMenuIndex = 0;
             char EnterArrow = (char)0017;
@@ -26,7 +26,7 @@ namespace Task1
             string[] MenuItems = {
             "1.1 The magnificent ten (0/10) ",
             "1.2 String, not sting (0/4) ",
-            "1.3 unknow (empty) ",
+            "1.3 unknown (empty) ",
             "1.4 unknown (empty) ",
             "1.5 unknown (empty) "
             };
@@ -99,9 +99,12 @@ namespace Task1
                     {
                         case 2:
                             Console.Clear();
-                            SubMenu sub = new SubMenu();
-                            string[] SubMenuTemp = sub.SubMenuStorage(StaticMenuIndex);
-                            Console.WriteLine(SubMenuTemp[EnterArrowIndex]);
+                            //SubMenu sub = new SubMenu();
+                            //string[] SubMenuTemp = sub.SubMenuStorage(StaticMenuIndex);
+                            //Console.WriteLine(SubMenuTemp[EnterArrowIndex]);
+                            
+                            SubMenu SubCall = new SubMenu();
+                            SubCall.ClassCall(StaticMenuIndex, EnterArrowIndex);
                             break;
                         default:
                             Console.Clear();
@@ -166,12 +169,41 @@ namespace Task1
         public void GetPosition(int EnterArrowIndex)
         {
             Console.WriteLine(EnterArrowIndex);
-            PositionReturn();
         }
 
-        public void PositionReturn()
+        
+        public void ClassCall(int StaticMenuIndex, int EnterArrowIndex)
         {
-            
+            switch (StaticMenuIndex)
+            {
+                case 0:
+                {
+                        TheMagnificentTenSwitch(EnterArrowIndex);
+                        break;
+                }
+                 default:
+                    {
+                        Console.WriteLine("the task does not exist or is not ready");
+                        break;
+                    }
+            }
+        }
+
+        public void TheMagnificentTenSwitch(int EnterArrowIndex)
+        {
+            switch (EnterArrowIndex)
+            {
+                case 0:
+                    {
+                        Rectangle.Main();
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("the subtask does not exist or is not ready");
+                        break;
+                    }
+            }
         }
 
     }
