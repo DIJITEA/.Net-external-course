@@ -30,6 +30,7 @@
                     {
                         Console.WriteLine("input can only have numeric values greater than zero");
                         Console.Write("enter the value again: ");
+                        result = 0;
                     }
 
                 }
@@ -37,6 +38,7 @@
                 {
                     Console.WriteLine("input can only have numeric values");
                     Console.Write("enter the value again: ");
+                    
                 }
             }
             return result;
