@@ -1,4 +1,6 @@
-﻿namespace _1._1._1_Rectangle
+﻿using used_frequently;
+
+namespace _1._1._1_Rectangle
 {
     public class Rectangle
     {
@@ -6,42 +8,13 @@
         {
             int RectangleArea = 0;
             Console.Write("enter 'a' side: ");
-            int a = Try2Parse();
+            int a = UsedFrequently.Try2Parse();
             //RectangleArea = Try2Parse(a);
             Console.Write("enter 'b' side: ");
-            int b = Try2Parse();
+            int b = UsedFrequently.Try2Parse();
             RectangleArea = a * b;
             Console.Write($"Rectangle area = {RectangleArea}");
 
-        }
-        public static int Try2Parse()
-        {
-            int result = 0;
-            while (result == 0)
-            {
-                string UnparsedValue = Console.ReadLine();
-                if (Int32.TryParse(UnparsedValue, out result))
-                {
-                    if (result > 0)
-                    {
-                        return result;
-                    }
-                    else
-                    {
-                        Console.WriteLine("input can only have numeric values greater than zero");
-                        Console.Write("enter the value again: ");
-                        result = 0;
-                    }
-
-                }
-                else
-                {
-                    Console.WriteLine("input can only have numeric values");
-                    Console.Write("enter the value again: ");
-                    
-                }
-            }
-            return result;
         }
     }
 }

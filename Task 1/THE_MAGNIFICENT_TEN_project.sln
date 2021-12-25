@@ -5,7 +5,13 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THE_MAGNIFICENT_TEN", "Navigation_bar\THE_MAGNIFICENT_TEN.csproj", "{62BEDC5C-39D4-4B4E-BCCD-0AEB85618950}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1.1_Rectangle", "1.1.1_Rectangle\1.1.1_Rectangle.csproj", "{EACE729C-5503-4FD3-A5CC-9E4B406C2A3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.1.1_Rectangle", "1.1.1_Rectangle\1.1.1_Rectangle.csproj", "{EACE729C-5503-4FD3-A5CC-9E4B406C2A3A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.1.2_Triangle", "1.1.2_Triangle\1.1.2_Triangle.csproj", "{EB418784-DD25-472B-B542-8A8FA31DD80A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "used_frequently", "used_frequently\used_frequently.csproj", "{591D31DD-9EF7-4C87-8677-A024969A4881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1.3_Another_triangle", "1.1.3_Another_triaangle\1.1.3_Another_triangle.csproj", "{95BDD06B-726D-494C-8B66-F448BB3044EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{EACE729C-5503-4FD3-A5CC-9E4B406C2A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EACE729C-5503-4FD3-A5CC-9E4B406C2A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EACE729C-5503-4FD3-A5CC-9E4B406C2A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB418784-DD25-472B-B542-8A8FA31DD80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB418784-DD25-472B-B542-8A8FA31DD80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB418784-DD25-472B-B542-8A8FA31DD80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB418784-DD25-472B-B542-8A8FA31DD80A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{591D31DD-9EF7-4C87-8677-A024969A4881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591D31DD-9EF7-4C87-8677-A024969A4881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591D31DD-9EF7-4C87-8677-A024969A4881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{591D31DD-9EF7-4C87-8677-A024969A4881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95BDD06B-726D-494C-8B66-F448BB3044EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95BDD06B-726D-494C-8B66-F448BB3044EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95BDD06B-726D-494C-8B66-F448BB3044EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95BDD06B-726D-494C-8B66-F448BB3044EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
