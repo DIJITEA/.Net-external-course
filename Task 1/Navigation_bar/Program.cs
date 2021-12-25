@@ -1,4 +1,6 @@
 ﻿using _1._1._1_Rectangle;
+using _1._1._2_Triangle;
+using _1._1._3_Another_triangle;
 using System;
 
 
@@ -191,6 +193,17 @@ namespace Task1
                 case 0:
                     {
                         Rectangle.Main();
+                     
+                        break;
+                    }
+                case 1:
+                    {
+                        Triangle.Main();
+                        break;
+                    }
+                case 2:
+                    {
+                        AnotherTriangle.Main();
                         break;
                     }
                 default:
