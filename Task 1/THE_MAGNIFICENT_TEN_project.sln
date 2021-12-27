@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.1.1_Rectangle", "1.1.1_Re
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.1.2_Triangle", "1.1.2_Triangle\1.1.2_Triangle.csproj", "{EB418784-DD25-472B-B542-8A8FA31DD80A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "used_frequently", "used_frequently\used_frequently.csproj", "{591D31DD-9EF7-4C87-8677-A024969A4881}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "used_frequently", "used_frequently\used_frequently.csproj", "{591D31DD-9EF7-4C87-8677-A024969A4881}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1.3_Another_triangle", "1.1.3_Another_triaangle\1.1.3_Another_triangle.csproj", "{95BDD06B-726D-494C-8B66-F448BB3044EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.1.3_Another_triangle", "1.1.3_Another_triaangle\1.1.3_Another_triangle.csproj", "{95BDD06B-726D-494C-8B66-F448BB3044EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1.4_X-mas_tree", "1.1.4_X-mas_tree\1.1.4_X-mas_tree.csproj", "{2EE12CD4-C84F-439E-AF42-EEB08666CF26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{95BDD06B-726D-494C-8B66-F448BB3044EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95BDD06B-726D-494C-8B66-F448BB3044EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95BDD06B-726D-494C-8B66-F448BB3044EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EE12CD4-C84F-439E-AF42-EEB08666CF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EE12CD4-C84F-439E-AF42-EEB08666CF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EE12CD4-C84F-439E-AF42-EEB08666CF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EE12CD4-C84F-439E-AF42-EEB08666CF26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

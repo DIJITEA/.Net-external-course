@@ -1,6 +1,7 @@
 ﻿using _1._1._1_Rectangle;
 using _1._1._2_Triangle;
 using _1._1._3_Another_triangle;
+using _1._1._4_X_mas_tree;
 using System;
 
 
@@ -204,6 +205,11 @@ namespace Task1
                 case 2:
                     {
                         AnotherTriangle.Main();
+                        break;
+                    }
+                case 3:
+                    {
+                        XMassTree.Main();
                         break;
                     }
                 default:
