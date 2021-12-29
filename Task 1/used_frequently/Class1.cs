@@ -31,5 +31,24 @@
             }
             return result;
         }
+
+        public static int Try2ParseLessThenN(int n)
+        {
+            int result = 0;
+            while (result == 0)
+            {
+                int rtnValue = Try2Parse();
+                if (rtnValue <= n)
+                {
+                    result = rtnValue;
+                }
+                else
+                {
+                    Console.WriteLine("the input can't exceed the allowed value (out of range)");
+                    Console.Write("enter the value again: ");
+                }
+            }
+            return result;
+        }
     }
 }

@@ -12,6 +12,8 @@
     <ProjectReference Include="..\1.1.2_Triangle\1.1.2_Triangle.csproj" />
     <ProjectReference Include="..\1.1.3_Another_triaangle\1.1.3_Another_triangle.csproj" />
     <ProjectReference Include="..\1.1.4_X-mas_tree\1.1.4_X-mas_tree.csproj" />
+    <ProjectReference Include="..\1.1.5_Sum_of_numbers\1.1.5_Sum_of_numbers.csproj" />
+    <ProjectReference Include="..\1.1.6_Font_adjustmen\1.1.6_Font_adjustment.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,6 +2,8 @@
 using _1._1._2_Triangle;
 using _1._1._3_Another_triangle;
 using _1._1._4_X_mas_tree;
+using _1._1._5_Sum_of_numbers;
+using _1._1._6_Font_adjustmen;
 using System;
 
 
@@ -210,6 +212,16 @@ namespace Task1
                 case 3:
                     {
                         XMassTree.Main();
+                        break;
+                    }
+                case 4:
+                    {
+                        SumOfNubers.Main();
+                        break;
+                    }
+                case 5:
+                    {
+                        FontAdjustment.Main();
                         break;
                     }
                 default:
