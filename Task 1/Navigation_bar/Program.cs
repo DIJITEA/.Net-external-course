@@ -31,7 +31,7 @@ namespace Task1
         public static void MainMenu(ref int EnterArrowIndex, char EnterArrow, ref int MenuLength, ref int MenuLogicCase, ref int StaticMenuIndex)
         {
             string[] MenuItems = {
-            "1.1 The magnificent ten (0/10) ",
+            "1.1 The magnificent ten (10/10) ",
             "1.2 String, not sting (0/4) ",
             "1.3 unknown (empty) ",
             "1.4 unknown (empty) ",
