@@ -1,9 +1,13 @@
 ﻿using _1._1._1_Rectangle;
+using _1._1._10_2D_array;
 using _1._1._2_Triangle;
 using _1._1._3_Another_triangle;
 using _1._1._4_X_mas_tree;
 using _1._1._5_Sum_of_numbers;
 using _1._1._6_Font_adjustmen;
+using _1._1._7_Array_processing;
+using _1._1._8_No_positive;
+using _1._1._9_Non_negative_sum;
 using System;
 
 
@@ -222,6 +226,26 @@ namespace Task1
                 case 5:
                     {
                         FontAdjustment.Main();
+                        break;
+                    }
+                case 6:
+                    {
+                        ArrayProcessing.Main();
+                        break;
+                    }
+                case 7:
+                    {
+                        NoPositive.Main();
+                        break;
+                    }
+                case 8:
+                    {
+                        NonNegativeSum.Main();
+                        break;
+                    }
+                case 9:
+                    {
+                        TwoDArray.Main();
                         break;
                     }
                 default:
