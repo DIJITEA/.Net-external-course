@@ -6,7 +6,7 @@ namespace _1._1._10_2D_array
     {
         public static void Main()
         {
-            Console.WriteLine("Non-Negative Sum");
+            Console.WriteLine("2D array");
             Console.Write("enter array (n*n)length: ");
             int n = UsedFrequently.Try2Parse();
             int sum = 0;
