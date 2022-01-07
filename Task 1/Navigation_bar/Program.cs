@@ -8,6 +8,7 @@ using _1._1._6_Font_adjustmen;
 using _1._1._7_Array_processing;
 using _1._1._8_No_positive;
 using _1._1._9_Non_negative_sum;
+using _1._2._1_Averages;
 using System;
 
 
@@ -185,6 +186,11 @@ namespace Task1
                         TheMagnificentTenSwitch(EnterArrowIndex);
                         break;
                 }
+                case 1:
+                    {
+                        StringNotStingSwitch(EnterArrowIndex);
+                        break;
+                    }
                  default:
                     {
                         Console.WriteLine("the task does not exist or is not ready");
@@ -255,7 +261,19 @@ namespace Task1
                     }
             }
         }
-
+        public static void StringNotStingSwitch(int EnterArrowIndex)
+        {
+            switch (EnterArrowIndex)
+            {
+                case 0:
+                    {
+                        {
+                            Averages.Main();
+                            break;
+                        }
+                    }
+            }
+        }
     }
 }
 

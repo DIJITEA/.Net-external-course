@@ -18,6 +18,7 @@
     <ProjectReference Include="..\1.1.7_Array_processing\1.1.7_Array_processing.csproj" />
     <ProjectReference Include="..\1.1.8_No_positive\1.1.8_No_positive.csproj" />
     <ProjectReference Include="..\1.1.9_Non-negative_sum\1.1.9_Non-negative_sum.csproj" />
+    <ProjectReference Include="..\1.2.1_Averages\1.2.1_Averages.csproj" />
   </ItemGroup>
 
 </Project>
