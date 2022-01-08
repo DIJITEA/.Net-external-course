@@ -12,7 +12,7 @@ namespace _1._2._1_Averages
                 inputStr = Regex.Replace(inputStr, @"[^\w]", " ");
 
                 string[] inputStrArray = inputStr.Split(' ');
-                int averageLength = 0;
+                double averageLength = 0;
                 int emptyElements = 0;
 
                 foreach (string item in inputStrArray)
@@ -25,7 +25,7 @@ namespace _1._2._1_Averages
                 }
 
                 averageLength = averageLength / (inputStrArray.Length - emptyElements);
-                Console.WriteLine(averageLength);
+                Console.WriteLine(Math.Round(averageLength, 1));
             } else
             {
                 Console.WriteLine("Error: string is empty or null");
