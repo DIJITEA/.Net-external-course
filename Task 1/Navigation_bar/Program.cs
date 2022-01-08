@@ -36,7 +36,7 @@ namespace Task1
         {
             string[] MenuItems = {
             "1.1 The magnificent ten (10/10) ",
-            "1.2 String, not sting (0/4) ",
+            "1.2 String, not sting (4/4) ",
             "1.3 unknown (empty) ",
             "1.4 unknown (empty) ",
             "1.5 unknown (empty) "
