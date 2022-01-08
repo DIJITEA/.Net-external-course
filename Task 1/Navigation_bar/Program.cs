@@ -9,6 +9,9 @@ using _1._1._7_Array_processing;
 using _1._1._8_No_positive;
 using _1._1._9_Non_negative_sum;
 using _1._2._1_Averages;
+using _1._2._2_Doubler;
+using _1._2._3_LowerCase;
+using _1._2._4_Validator;
 using System;
 
 
@@ -266,11 +269,24 @@ namespace Task1
             switch (EnterArrowIndex)
             {
                 case 0:
+                    {             
+                        Averages.Main();
+                        break;    
+                    }
+                case 1:
                     {
-                        {
-                            Averages.Main();
-                            break;
-                        }
+                        Doubler.Main();
+                        break;
+                    }
+                case 2:
+                    {
+                        Lowercase.Main();
+                        break;
+                    }
+                case 3:
+                    {
+                        Validator.Main();
+                        break;
                     }
             }
         }
