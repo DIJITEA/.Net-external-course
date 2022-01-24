@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>_2._1._2_CUSTOM_PAINT</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="used_frequently">
+      <HintPath>..\..\..\Task 1\used_frequently\bin\Debug\net6.0\used_frequently.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
