@@ -10,6 +10,7 @@ namespace Task2_2
         private static string _you = " \u263B ";
         private static string _emptyField = "   ";
         private static string _cyborgKiller = "(\u25ac)";
+        //field scale
         private static string[,] _field = new string[25 + 1, 35 + 1];
         private static int[] _fieldBorder = {_field.GetLength(0), _field.GetLength(1) };
         private static int[] _cyborgPosition;
@@ -31,6 +32,7 @@ namespace Task2_2
             Console.WriteLine($"{_you} - you ");
             Console.WriteLine($"{_emptyField} - empty field ");
             Console.WriteLine($"{_cyborgKiller} - cyborg killer");
+            Console.WriteLine("PRESS ENTER TO START");
 
             ConsoleKeyInfo cki;
             do
