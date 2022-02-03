@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\1.1.10_2D_array\1.1.10_2D_array.csproj" />
+    <ProjectReference Include="..\1.1.1_Rectangle\1.1.1_Rectangle.csproj" />
+    <ProjectReference Include="..\1.1.2_Triangle\1.1.2_Triangle.csproj" />
+    <ProjectReference Include="..\1.1.3_Another_triaangle\1.1.3_Another_triangle.csproj" />
+    <ProjectReference Include="..\1.1.4_X-mas_tree\1.1.4_X-mas_tree.csproj" />
+    <ProjectReference Include="..\1.1.5_Sum_of_numbers\1.1.5_Sum_of_numbers.csproj" />
+    <ProjectReference Include="..\1.1.6_Font_adjustmen\1.1.6_Font_adjustment.csproj" />
+    <ProjectReference Include="..\1.1.7_Array_processing\1.1.7_Array_processing.csproj" />
+    <ProjectReference Include="..\1.1.8_No_positive\1.1.8_No_positive.csproj" />
+    <ProjectReference Include="..\1.1.9_Non-negative_sum\1.1.9_Non-negative_sum.csproj" />
+  </ItemGroup>
+
+</Project>

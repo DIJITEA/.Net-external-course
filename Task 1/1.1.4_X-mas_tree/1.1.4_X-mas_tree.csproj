@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>_1._1._4_X_mas_tree</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\1.1.3_Another_triaangle\1.1.3_Another_triangle.csproj" />
+    <ProjectReference Include="..\used_frequently\used_frequently.csproj" />
+  </ItemGroup>
+
+</Project>
