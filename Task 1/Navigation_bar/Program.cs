@@ -8,6 +8,10 @@ using _1._1._6_Font_adjustmen;
 using _1._1._7_Array_processing;
 using _1._1._8_No_positive;
 using _1._1._9_Non_negative_sum;
+using _1._2._1_Averages;
+using _1._2._2_Doubler;
+using _1._2._3_LowerCase;
+using _1._2._4_Validator;
 using System;
 
 
@@ -32,7 +36,7 @@ namespace Task1
         {
             string[] MenuItems = {
             "1.1 The magnificent ten (10/10) ",
-            "1.2 String, not sting (0/4) ",
+            "1.2 String, not sting (4/4) ",
             "1.3 unknown (empty) ",
             "1.4 unknown (empty) ",
             "1.5 unknown (empty) "
@@ -185,6 +189,11 @@ namespace Task1
                         TheMagnificentTenSwitch(EnterArrowIndex);
                         break;
                 }
+                case 1:
+                    {
+                        StringNotStingSwitch(EnterArrowIndex);
+                        break;
+                    }
                  default:
                     {
                         Console.WriteLine("the task does not exist or is not ready");
@@ -255,7 +264,32 @@ namespace Task1
                     }
             }
         }
-
+        public static void StringNotStingSwitch(int EnterArrowIndex)
+        {
+            switch (EnterArrowIndex)
+            {
+                case 0:
+                    {             
+                        Averages.Main();
+                        break;    
+                    }
+                case 1:
+                    {
+                        Doubler.Main();
+                        break;
+                    }
+                case 2:
+                    {
+                        Lowercase.Main();
+                        break;
+                    }
+                case 3:
+                    {
+                        Validator.Main();
+                        break;
+                    }
+            }
+        }
     }
 }
 
