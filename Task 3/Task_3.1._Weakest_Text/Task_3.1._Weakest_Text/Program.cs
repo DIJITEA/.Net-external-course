@@ -1,6 +1,8 @@
 ﻿using used_frequently;
 using _3._1._1_Weakest_link;
 using System;
+using _3._1._2_Text_analysis;
+
 namespace Program
 {
     public class Program
@@ -26,8 +28,8 @@ namespace Program
                     weakestList.Main();
                     break;
                 case 2:
-                    Console.WriteLine("in process");
-                    Main();
+                    TextAnalysis textAnalysis = new TextAnalysis();
+                    textAnalysis.Main();
                     break;
             }
         }
