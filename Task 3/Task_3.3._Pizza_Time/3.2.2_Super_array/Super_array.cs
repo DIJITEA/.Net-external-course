@@ -1,45 +1,37 @@
 ﻿namespace _3._2._2_Super_array
 {
+    public class Super_array_Delegates
+    {
+        public delegate int IntDelegate(int[] array);
+        public delegate double DoubleDelegate(int[] array);
+    }
+
     public class Super_array
     {
-        int[] SuperArray;
-        public Super_array()
-        {
-            SuperArray = new int[0];
-        }
-        public Super_array(int[] value)
-        {
-            SuperArray = new int[value.Length];
-            for (int i = 0; i < value.Length; i++)
-            {
-                SuperArray[i] = value[i];
-            }
-        }
-
-        public int Sum()
+        public int Sum(int[] SuperArray)
         {
             int temp = 0;
-            foreach (int item in this.SuperArray)
+            foreach (int item in SuperArray)
             {
                 temp += item;
             }
             return temp;
         }
-        public double Mean()
+        public double Mean(int[] SuperArray)
         {
-            double result = Convert.ToDouble(this.SuperArray.Sum())/(this.SuperArray.Length);
+            double result = Convert.ToDouble(SuperArray.Sum())/(SuperArray.Length);
             return result;
         }
-        public int closestToTheMean()
+        public int ClosestToTheMean(int[] SuperArray)
         {
             int result = 0;
-            double tempMean = Math.Round(Mean(), MidpointRounding.AwayFromZero); ;
-            double min = this.SuperArray.Max() - tempMean;
-            for (int i = 0; i < this.SuperArray.Length; i++)
+            double tempMean = Math.Round(Mean(SuperArray), MidpointRounding.AwayFromZero); ;
+            double min = SuperArray.Max() - tempMean;
+            for (int i = 0; i < SuperArray.Length; i++)
             {
-                if (this.SuperArray[i] - tempMean < min && this.SuperArray[i] - tempMean >= 0)
+                if (SuperArray[i] - tempMean < min && SuperArray[i] - tempMean >= 0)
                 {
-                    result = this.SuperArray[i];
+                    result = SuperArray[i];
                     min = result - tempMean;
                 }
             }
@@ -47,16 +39,16 @@
         }
 
 
-        public int MostFrequent()
+        public int MostFrequent(int[] SuperArray)
         {
             Dictionary<int, int> tempDictionary = new Dictionary<int, int>();
-            for (int i = 0; i < this.SuperArray.Length; i++)
+            for (int i = 0; i < SuperArray.Length; i++)
             {
-                if (!tempDictionary.ContainsKey(this.SuperArray[i]))
+                if (!tempDictionary.ContainsKey(SuperArray[i]))
                 {
-                    tempDictionary.Add(this.SuperArray[i], 1);
+                    tempDictionary.Add(SuperArray[i], 1);
                 }
-                else tempDictionary[this.SuperArray[i]]++;
+                else tempDictionary[SuperArray[i]]++;
             }
             var MaxKV = (from e in tempDictionary select e.Value).Max();
             foreach (var item in tempDictionary)
@@ -66,7 +58,6 @@
                     return item.Key;
                 }
             }
-            //var MaxV = MaxKV.Value;
             return 0;
         }
 
