@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_3.3._Pizza_Time", "Task_3.3._Pizza_Time\Task_3.3._Pizza_Time.csproj", "{B04889E9-A5F5-49C3-94FA-B68AD9C9C63F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task_3.3._Pizza_Time", "Task_3.3._Pizza_Time\Task_3.3._Pizza_Time.csproj", "{B04889E9-A5F5-49C3-94FA-B68AD9C9C63F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.2.2_Super_array", "3.2.2_Super_array\3.2.2_Super_array.csproj", "{A7B3F02B-C888-4C9F-AA9E-34EB1F3AD4CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.2.2_Super_array", "3.2.2_Super_array\3.2.2_Super_array.csproj", "{A7B3F02B-C888-4C9F-AA9E-34EB1F3AD4CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.3.2._Super_string", "3.3.2._SUPER STRING\3.3.2._Super_string.csproj", "{8DEF10E8-C1DA-4D09-88D6-6DAE9E5E20BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A7B3F02B-C888-4C9F-AA9E-34EB1F3AD4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7B3F02B-C888-4C9F-AA9E-34EB1F3AD4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7B3F02B-C888-4C9F-AA9E-34EB1F3AD4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DEF10E8-C1DA-4D09-88D6-6DAE9E5E20BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DEF10E8-C1DA-4D09-88D6-6DAE9E5E20BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DEF10E8-C1DA-4D09-88D6-6DAE9E5E20BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DEF10E8-C1DA-4D09-88D6-6DAE9E5E20BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

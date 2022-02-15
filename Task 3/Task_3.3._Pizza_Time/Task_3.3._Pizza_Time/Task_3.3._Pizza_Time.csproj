@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\3.2.2_Super_array\3.2.2_Super_array.csproj" />
+    <ProjectReference Include="..\3.3.2._SUPER STRING\3.3.2._Super_string.csproj" />
   </ItemGroup>
 
 </Project>
