@@ -24,9 +24,7 @@
                     { 
                         switcher = 2;
                     }
-                    else switcher = 4;
-                        
-                    Console.WriteLine((byte)ch);
+                    else switcher = 4;     
                 }
 
                 

@@ -1,5 +1,6 @@
 ﻿using _3._2._2_Super_array;
 using _3._3._2._SUPER_STRING;
+using _3._3._3._Pizza_time;
 using System;
 
 namespace Program
@@ -8,21 +9,38 @@ namespace Program
     {
         public static void Main()
         {
-            int[] array1 = { 1, 2, 3, 4, 5, 6, 7, 7, 8, 8, 9, 10, 11 };
+            Pizza_time.Main();
 
-            Super_array superArray = new Super_array();
-            Super_array_Delegates.IntDelegate sum = new Super_array_Delegates.IntDelegate(superArray.Sum);
-            Super_array_Delegates.DoubleDelegate mean = new Super_array_Delegates.DoubleDelegate(superArray.Mean);
-            Super_array_Delegates.IntDelegate closestToTheMean = new Super_array_Delegates.IntDelegate(superArray.ClosestToTheMean);
-            Super_array_Delegates.IntDelegate mostFrequent = new Super_array_Delegates.IntDelegate(superArray.MostFrequent);
-            Console.WriteLine(sum(array1));
-            Console.WriteLine(mean(array1));
-            Console.WriteLine(closestToTheMean(array1));
-            Console.WriteLine(mostFrequent(array1));
+            //Task_1_Super_array super_array = new Task_1_Super_array();
+            //super_array.ConsoleOutput();
 
-            Super_string str = new Super_string();
-            Console.WriteLine("-----");
-            Console.WriteLine(str.stringReturn(""));
+            //Task_2_Super_string super_string = new Task_2_Super_string();
+            //super_string.ConsoleOutput();
+        }
+    }
+    public class Task_1_Super_array
+    {
+        int[] array1 = { 1, 2, 3, 4, 5, 6, 7, 7, 8, 8, 9, 10, 11 };
+        static Super_array superArray = new Super_array();
+        Super_array_Delegates.IntDelegate sum = new Super_array_Delegates.IntDelegate(superArray.Sum);
+        Super_array_Delegates.DoubleDelegate mean = new Super_array_Delegates.DoubleDelegate(superArray.Mean);
+        Super_array_Delegates.IntDelegate closestToTheMean = new Super_array_Delegates.IntDelegate(superArray.ClosestToTheMean);
+        Super_array_Delegates.IntDelegate mostFrequent = new Super_array_Delegates.IntDelegate(superArray.MostFrequent);
+        public void ConsoleOutput()
+        {
+            Console.WriteLine(this.sum(this.array1));
+            Console.WriteLine(this.mean(this.array1));
+            Console.WriteLine(this.closestToTheMean(this.array1));
+            Console.WriteLine(this.mostFrequent(this.array1));
+        }
+    }
+    public class Task_2_Super_string
+    {
+        Super_string str = new Super_string();
+        public void ConsoleOutput()
+        {
+            string input = Console.ReadLine();
+            Console.WriteLine(this.str.stringReturn(input));
         }
     }
 }
