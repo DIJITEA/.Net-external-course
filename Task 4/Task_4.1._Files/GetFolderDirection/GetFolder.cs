@@ -16,10 +16,6 @@ namespace GetFolderDirection
 
         }
 
-        public static void Main()
-        {
-          
-        }
     }
     public class DrivesInfo
     {
@@ -36,15 +32,20 @@ namespace GetFolderDirection
     public class FolderInfo
     {
         
-        public void Filesw()
+        public FileInfo[] Filesw()
         {
             DirectoryInfo dinfo = new DirectoryInfo(@"D:\EPAM_test_folder_task4");
             FileInfo[] files = dinfo.GetFiles("*.txt");
             Console.WriteLine("Available \".txt\" files:");
-            foreach (FileInfo file in files)
+            //foreach (FileInfo file in files)
+            //{
+            //    Console.WriteLine(file.Name);
+            //}
+            for (int i = 0; i < files.Length; i++)
             {
-                Console.WriteLine(file.Name);
+                Console.WriteLine(i + ". " + files[i].Name);
             }
+            return files;
         }
     }
     public class FileTracking
@@ -61,8 +62,33 @@ namespace GetFolderDirection
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
 
+            TrackerTasks();
+
             Console.ReadLine();
         }
+
+        private static void TrackerTasks()
+        {
+            Console.WriteLine("1. Get history");
+            Console.WriteLine("2. rollback");
+            int switcher = Convert.ToInt32(Console.ReadLine());
+            switch (switcher)
+            {
+                case 1:
+                    GetHistoty();
+                    break;
+            }
+
+        }
+        private static void GetHistoty()
+        {
+            FolderInfo testFolder = new FolderInfo();
+            FileInfo[] files = testFolder.Filesw();
+            Console.WriteLine("enter file number: ");
+            int fileNum = Convert.ToInt32(Console.ReadLine());
+            new GetChanges(files[fileNum].FullName, files[fileNum].Name, 3);
+        }
+
         private static void OnCreated(object sender, FileSystemEventArgs e)
         {
             string value = $"Created: {e.FullPath}";
@@ -74,8 +100,9 @@ namespace GetFolderDirection
             {
                 return;
             }
-            string value = $"Changed: {e.FullPath}";
-            GetChanges test = new GetChanges(e.FullPath);
+            string value = $"Changed: {e.Name}";
+            new GetChanges(e.FullPath, e.Name, 1);
+            
             Console.WriteLine(value);
 
         }
@@ -88,6 +115,7 @@ namespace GetFolderDirection
             Console.WriteLine($"Renamed:");
             Console.WriteLine($"    Old: {e.OldFullPath}");
             Console.WriteLine($"    New: {e.FullPath}");
+            new GetChanges(e.FullPath, e.OldFullPath, e.Name, 2);
         }
     }
 }

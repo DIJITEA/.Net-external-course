@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GetFolderDirection\GetFolderDirection.csproj" />
     <ProjectReference Include="..\JSON_task4_dll\JSON_task4_dll.csproj" />
   </ItemGroup>
