@@ -90,18 +90,19 @@ namespace JSON_task4_dll
                 Console.WriteLine(data.Value.Name);
                 Console.WriteLine(data.Value.Time);
                 Console.WriteLine(data.Value.Path);
-                //await BackToTheFututre(data.Value);
+                await BackToTheFututre(data.Value);
             }
         }
-        //private async Task BackToTheFututre(data logData)
-        //{
-        //    using (FileStream fs2 = File.OpenWrite(logData.Path))
-        //    {
-        //        byte[] buffer = Encoding.Default.GetBytes(logData.Message);
-        //        await fs2.WriteAsync(buffer, 0, buffer.Length);
-        //        Console.WriteLine("Done");
-        //    }
-        //}
+        private async Task BackToTheFututre(data logData)
+        {
+            File.WriteAllText(logData.Path, string.Empty);
+            using (FileStream fs = File.OpenWrite(logData.Path))
+            {
+                byte[] buffer = Encoding.Default.GetBytes(logData.Message);
+                await fs.WriteAsync(buffer, 0, buffer.Length);
+                Console.WriteLine("Done");
+            }
+        }
     }
     public class data
     {
@@ -110,10 +111,6 @@ namespace JSON_task4_dll
         public Guid Id { get; set; }
         public DateTime Time { get; set; }
         public string Message { get; set; }
-    }
-    public class testDec
-    {
-        //public string Path 
     }
 
 

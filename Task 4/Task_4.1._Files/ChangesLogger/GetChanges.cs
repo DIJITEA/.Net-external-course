@@ -34,10 +34,7 @@ namespace ChangesLogger
             JsonClass JsonCall = new JsonClass();
             JsonCall.GetFileHistory(this._RollDate);
         }
-        //private async void awaitOpenFileStream()
-        //{
-        //    await OpenFileStream();
-        //}
+
         private async void OpenFileStream()
         {
             using (FileStream fs = File.OpenRead(this._FileFullPath))
@@ -62,7 +59,6 @@ namespace ChangesLogger
                         JsonCall.GetFileHistory(this._RollDate);
                         break;
                 }
-                //JsonCall.Main(textFromFile, this._FileFullPath, this._FileFullName);
             }
         }
     }
