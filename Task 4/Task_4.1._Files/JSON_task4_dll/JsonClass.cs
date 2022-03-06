@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Text;
 
+
 namespace JSON_task4_dll
 {
     public class JsonClass
@@ -8,6 +9,7 @@ namespace JSON_task4_dll
         private string _jsonPath = @"D:\EPAM_test_folder_task4\path.json";
 
         private List<data> _dataList = new List<data>();
+        private Dictionary<string, data> _tempDataDictionary = new Dictionary<string, data>();
         private data _data = new data();
         private async Task GetCurrentLogs()
         {
@@ -21,15 +23,15 @@ namespace JSON_task4_dll
 
                     _dataList = JsonConvert.DeserializeObject<List<data>>(json);
 
-                    foreach(data data in _dataList)
+                    foreach (data data in _dataList)
                     {
                         string Path = data.Path;
                     }
                 }
             }
-            else 
+            else
             {
-                using (FileStream fs = File.Create(_jsonPath));
+                using (FileStream fs = File.Create(_jsonPath)) ;
             }
         }
         public async void LogCreate(string FileTextData, string FileFullPath, string FileName)
@@ -44,7 +46,7 @@ namespace JSON_task4_dll
             _dataList.Add(this._data);
 
             string json = JsonConvert.SerializeObject(this._dataList);
-            
+
             File.WriteAllText(_jsonPath, json);
         }
         public async void LogUpdate(string FileTextData, string FileFullPath, string FileName, string FileOldPath)
@@ -59,32 +61,52 @@ namespace JSON_task4_dll
                     data.Path = FileFullPath;
                     Console.WriteLine(data.Name);
                     Console.WriteLine(data.Path);
-                }  
+                }
             }
             string json = JsonConvert.SerializeObject(this._dataList);
             File.WriteAllText(_jsonPath, json);
         }
-        public async void GetFileHistory(string FileName)
+        public async void GetFileHistory(DateTime RollDate)
         {
             await GetCurrentLogs();
-            Console.WriteLine(FileName + " history:");
-            foreach (data data in _dataList)
+            Console.WriteLine(RollDate + " history:");
+            for (int i = _dataList.Count() - 1; i >= 0; i--)
             {
-                if (data.Name == FileName)
+                if (_dataList[i].Time >= RollDate)
                 {
-                    Console.WriteLine("--------------------");
-                    Console.WriteLine(data.Id);
-                    Console.WriteLine(data.Time);
-                    Console.WriteLine(data.Message);
-                    Console.WriteLine("--------------------");
+                    if (_tempDataDictionary.ContainsKey(_dataList[i].Name))
+                    {
+                        _tempDataDictionary[_dataList[i].Name] = _dataList[i];
+                    }
+                    else
+                    {
+                        _tempDataDictionary.Add(_dataList[i].Name, _dataList[i]);
+                    }
                 }
             }
+            foreach (var data in _tempDataDictionary)
+            {
+                Console.WriteLine(data);
+                Console.WriteLine(data.Value.Name);
+                Console.WriteLine(data.Value.Time);
+                Console.WriteLine(data.Value.Path);
+                //await BackToTheFututre(data.Value);
+            }
         }
+        //private async Task BackToTheFututre(data logData)
+        //{
+        //    using (FileStream fs2 = File.OpenWrite(logData.Path))
+        //    {
+        //        byte[] buffer = Encoding.Default.GetBytes(logData.Message);
+        //        await fs2.WriteAsync(buffer, 0, buffer.Length);
+        //        Console.WriteLine("Done");
+        //    }
+        //}
     }
     public class data
     {
-        public string Path { get; set; }   
-        public string Name { get; set; }    
+        public string Path { get; set; }
+        public string Name { get; set; }
         public Guid Id { get; set; }
         public DateTime Time { get; set; }
         public string Message { get; set; }

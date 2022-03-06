@@ -8,7 +8,8 @@ namespace ChangesLogger
         private string _FileFullName;
         private string _OldFullPath;
         private int _switcher;
-        public GetChanges(string FilePath, string FileName, int switcher) 
+        private DateTime _RollDate;
+        public GetChanges(string FilePath, string FileName, int switcher)
         {
             _FileFullPath = FilePath;
             _FileFullName = FileName;
@@ -23,10 +24,25 @@ namespace ChangesLogger
             _switcher = switcher;
             OpenFileStream();
         }
-        private async Task OpenFileStream()
+        public GetChanges(string FilePath, DateTime RollDate)
+        {
+            _FileFullPath = FilePath;
+            _RollDate = RollDate;
+            Console.WriteLine("Get Changes");
+            Console.WriteLine(_switcher);
+            Console.WriteLine(_RollDate);
+            JsonClass JsonCall = new JsonClass();
+            JsonCall.GetFileHistory(this._RollDate);
+        }
+        //private async void awaitOpenFileStream()
+        //{
+        //    await OpenFileStream();
+        //}
+        private async void OpenFileStream()
         {
             using (FileStream fs = File.OpenRead(this._FileFullPath))
             {
+                Console.WriteLine("OpenFileStream");
                 byte[] buffer = new byte[fs.Length];
                 await fs.ReadAsync(buffer, 0, buffer.Length);
                 string textFromFile = Encoding.Default.GetString(buffer);
@@ -34,13 +50,16 @@ namespace ChangesLogger
                 switch (_switcher)
                 {
                     case 1:
+                        Console.WriteLine("ask Changes");
                         JsonCall.LogCreate(textFromFile, this._FileFullPath, this._FileFullName);
                         break;
-                        case 2:
+                    case 2:
+                        Console.WriteLine("ask Changes");
                         JsonCall.LogUpdate(textFromFile, this._FileFullPath, this._FileFullName, this._OldFullPath);
                         break;
-                        case 3:
-                        JsonCall.GetFileHistory(this._FileFullName);
+                    case 3:
+                        Console.WriteLine("ask Changes");
+                        JsonCall.GetFileHistory(this._RollDate);
                         break;
                 }
                 //JsonCall.Main(textFromFile, this._FileFullPath, this._FileFullName);

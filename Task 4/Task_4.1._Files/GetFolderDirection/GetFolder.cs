@@ -1,19 +1,20 @@
 ﻿using ChangesLogger;
-using System.IO;
 namespace GetFolderDirection
 {
     public class GetFolder
     {
-        public static void Test()
+        public static void TrackingMode()
         {
-            DrivesInfo test = new DrivesInfo();
-            test.Drives();
-            FolderInfo testFolder = new FolderInfo();
-            testFolder.Filesw();
+            //DrivesInfo test = new DrivesInfo();
+            //test.Drives();
+            //FolderInfo testFolder = new FolderInfo();
+            //testFolder.Filesw();
 
-            FileTracking tracker = new FileTracking();
-            tracker.Tracker();
-
+            new FileTracking();
+        }
+        public static void RollbackMode()
+        {
+            new FileRollback();
         }
 
     }
@@ -31,7 +32,7 @@ namespace GetFolderDirection
     }
     public class FolderInfo
     {
-        
+
         public FileInfo[] Filesw()
         {
             DirectoryInfo dinfo = new DirectoryInfo(@"D:\EPAM_test_folder_task4");
@@ -48,9 +49,51 @@ namespace GetFolderDirection
             return files;
         }
     }
+    public class FileRollback
+    {
+        public FileRollback()
+        {
+            GetHistoty();
+            Console.ReadKey();
+        }
+        private static void GetHistoty()
+        {
+            //FolderInfo testFolder = new FolderInfo();
+            //FileInfo[] files = testFolder.Filesw();
+            //foreach (FileInfo file in files)
+            //{
+            //    new GetChanges(file.FullName, file.Name, 3);
+            //}
+            Console.Write("Enter year \"yyyy\": ");
+            string year = Console.ReadLine();
+            Console.Write("Enter month \"mm\": ");
+            string month = Console.ReadLine();
+            Console.Write("Enter day \"dd\": ");
+            string day = Console.ReadLine();
+            Console.Write("Enter hour \"hh\": ");
+            string hour = Console.ReadLine();
+            Console.Write("Enter minute \"mm\": ");
+            string minute = Console.ReadLine();
+            //string dateInput = $"{day}/{month}/{year} {hour}:{minute}:00"; //day/month/year time
+
+            var parsedDate = DateTime.Parse($"{day}/{month}/{year} {hour}:{minute}:00");
+            Console.WriteLine(parsedDate);
+
+            new GetChanges(@"D:\EPAM_test_folder_task4", parsedDate);
+            Console.WriteLine("logs ");
+            Console.ReadLine();
+            //int fileNum = Convert.ToInt32(Console.ReadLine());
+            //new GetChanges(files[fileNum].FullName, files[fileNum].Name, 3);
+        }
+
+    }
     public class FileTracking
     {
-        public void Tracker()
+        public FileTracking()
+        {
+            Tracker();
+        }
+        private void Tracker()
         {
             using var watcher = new FileSystemWatcher(@"D:\EPAM_test_folder_task4");
             watcher.Created += OnCreated;
@@ -62,32 +105,19 @@ namespace GetFolderDirection
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
 
-            TrackerTasks();
+
 
             Console.ReadLine();
         }
 
-        private static void TrackerTasks()
-        {
-            Console.WriteLine("1. Get history");
-            Console.WriteLine("2. rollback");
-            int switcher = Convert.ToInt32(Console.ReadLine());
-            switch (switcher)
-            {
-                case 1:
-                    GetHistoty();
-                    break;
-            }
-
-        }
-        private static void GetHistoty()
-        {
-            FolderInfo testFolder = new FolderInfo();
-            FileInfo[] files = testFolder.Filesw();
-            Console.WriteLine("enter file number: ");
-            int fileNum = Convert.ToInt32(Console.ReadLine());
-            new GetChanges(files[fileNum].FullName, files[fileNum].Name, 3);
-        }
+        //private static void GetHistoty()
+        //{
+        //    FolderInfo testFolder = new FolderInfo();
+        //    FileInfo[] files = testFolder.Filesw();
+        //    Console.WriteLine("enter file number: ");
+        //    int fileNum = Convert.ToInt32(Console.ReadLine());
+        //    new GetChanges(files[fileNum].FullName, files[fileNum].Name, 3);
+        //}
 
         private static void OnCreated(object sender, FileSystemEventArgs e)
         {
@@ -102,7 +132,7 @@ namespace GetFolderDirection
             }
             string value = $"Changed: {e.Name}";
             new GetChanges(e.FullPath, e.Name, 1);
-            
+
             Console.WriteLine(value);
 
         }
