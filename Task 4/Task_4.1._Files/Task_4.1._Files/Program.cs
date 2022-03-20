@@ -8,13 +8,14 @@ namespace Progrmam
     {
         public static void Main()
         {
+            string _folderDirection = @"D:\EPAM_test_folder_task4";
             Console.WriteLine(" Select mode: \n 1. Tracking  mode \n 2. Rollback Mode");
             int Mode = Int32.Parse(Console.ReadLine());
             switch (Mode)
             {
-                case 1: GetFolder.TrackingMode();
+                case 1: new GetFolder().TrackingMode(_folderDirection);
                     break;
-                case 2: GetFolder.RollbackMode();
+                case 2: new GetFolder().RollbackMode(_folderDirection);
                     break;
             }
         }

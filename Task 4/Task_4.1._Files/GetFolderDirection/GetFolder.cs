@@ -3,13 +3,16 @@ namespace GetFolderDirection
 {
     public class GetFolder
     {
-        public static void TrackingMode()
+        private string _folderDirection;
+        public void TrackingMode(string folderDirection)
         {
-            new FileTracking();
+            new FileTracking(_folderDirection);
+            this._folderDirection = folderDirection;
         }
-        public static void RollbackMode()
+        public void RollbackMode(string folderDirection)
         {
             new FileRollback();
+            this._folderDirection = folderDirection;
         }
 
     }
@@ -72,13 +75,15 @@ namespace GetFolderDirection
     }
     public class FileTracking
     {
-        public FileTracking()
+        private string _folderDirection;
+        public FileTracking(string folderDirection)
         {
             Tracker();
+            _folderDirection = folderDirection;
         }
         private void Tracker()
         {
-            using var watcher = new FileSystemWatcher(@"D:\EPAM_test_folder_task4");
+            using var watcher = new FileSystemWatcher(_folderDirection);
             watcher.Created += OnCreated;
             watcher.Changed += OnChanged;
             watcher.Deleted += OnDeleted;
