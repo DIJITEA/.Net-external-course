@@ -1,12 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styleReset.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/article.css" />
+    <link rel="stylesheet" href="./assets/css/list-menu.css" />
+    <link rel="stylesheet" href="./assets/css/registration-form.css" />
+    <link rel="stylesheet" href="./assets/css/pointing-block.css" />
+    <link rel="stylesheet" href="./assets/css/three-column-block.css" />
     <title>Task 6 CSS</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="header">
+        <div class="Quick-access-bar">
+            <div class="Quick-access-bar--zipper-pull"></div>
+            <ul type="none" class="Quick-access-bar--ul">
+                <li>
+                <a href="#LIST" class="Quick-access-bar__anchor-link">6.1. LIST</a>
+                </li>
+                <li>
+                <a href="#REGISTRATION_FORM" class="Quick-access-bar__anchor-link">6.2. REGISTRATION FORM</a>
+                </li>
+                <li>
+                <a href="#POINTING_BLOCK" class="Quick-access-bar__anchor-link">6.3. POINTING BLOCK</a>
+                </li>
+                <li>
+                <a href="#THREE_COLUMN_BLOCK" class="Quick-access-bar__anchor-link">6.4 THREE COLUMN BLOCK</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+
+        <article id="LIST" class="article">
+            <div class="article__conten-div">
+            <h2 class="article__h2">LIST MENU</h2>
+            <ul class="list-menu">
+                <li class="list-menu__li-item">Азу по-татарски</li>
+                <li class="list-menu__li-item">Зразы</li>
+                <li class="list-menu__li-item">Баранья грудинка, тушенная с картофелем</li>
+                <li class="list-menu__li-item">Бефстроганов</li>
+                <li class="list-menu__li-item">Бифштекс с яйцом</li>
+            </ul>
+            </div>
+        </article>
+
+        <article id="REGISTRATION_FORM" class="article">
+            <div class="article__conten-div">
+                <h2 class="article__h2">REGISTRATION FORM</h2>
+                <form class="registration-form">
+                    <div class="registration-form__content-wrapper">
+                        <div class="registration-form__header-wrapper">
+                            <h2 class="registration-form__header">Регистрация</h2>
+                        </div>
+                        <hr noshade color="white">
+                        <div class="registration-form__input-content-wrapper">
+                            <div class="registration-form__input-item-wrapper">
+                                <label for="email" class="registration-form__input-label">E-mail</label>
+                                <input type="text" name="email" class="registration-form__input-entry-field">
+                            </div>
+                            <div class="registration-form__input-item-wrapper registration-form__input-item-wrapper--row-direction">
+                                <div class="registration-form__input-item-wrapper">
+                                    <label for="Password" class="registration-form__input-label">Пароль</label>
+                                    <input type="password" name="Password" class="registration-form__input-entry-field">
+                                </div>
+                                <div class="registration-form__input-item-wrapper">
+                                    <label for="RepeatPassword" class="registration-form__input-label">Ещё раз</label>
+                                    <input type="password" name="RepeatPassword" class="registration-form__input-entry-field">
+                                </div>
+                            </div>
+                            <div class="registration-form__input-item-wrapper">
+                                <input type="submit" name="submitButton" value="Отправить" class="registration-form__input-item-submit">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </article>
+
+        <article id="POINTING_BLOCK" class="article">
+            <div class="article__conten-div">
+                <h2 class="article__h2">POINTING BLOCK</h2>
+                <div class="pointing-block">
+                    <div class="pointing-block-wrapper">
+                        <p>Дистанции огромного размера</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article id="THREE_COLUMN_BLOCK" class="article">
+            <div class="article__conten-div" style="background-color: #4e627a;">
+                <h2 class="article__h2">POINTING BLOCK</h2>
+                <div class="three-column-block">
+                    <div class="three-column-block__container">
+                        <div class="three-column-block__column">
+                            <img class="three-column-block__img" src="./assets/img/virual-hosting.png">
+                            <h3 class="three-column-block__header">Виртуальный хостинг</h3>
+                            <p class="three-column-block__p">3.95$ в месяц</p>
+                            <button class="three-column-block__button">Подробнее</button>
+                        </div>
+                        <div class="three-column-block__column">
+                            <img class="three-column-block__img" src="./assets/img/cloud-hosting.png">
+                            <h3 class="three-column-block__header">Облачный хостинг</h3>
+                            <p class="three-column-block__p">68.95$ в месяц</p>
+                            <button class="three-column-block__button">Подробнее</button>
+                        </div>
+                        <div class="three-column-block__column">
+                            <img class="three-column-block__img" src="./assets/img/dedicated-server.png">
+                            <h3 class="three-column-block__header">Выделенный сервер</h3>
+                            <p class="three-column-block__p">217.95$ в месяц</p>
+                            <button class="three-column-block__button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+  </body>
 </html>
