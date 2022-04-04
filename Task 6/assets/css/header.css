@@ -32,6 +32,17 @@
     background-color: rgb(106, 172, 172);
     border-radius: 0 0 15px 15px;
 }
+.Quick-access-bar--zipper-pull::before{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    content: " ";
+    width: 70%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: white;
+}
 
 /* В БЭМ так лучше не делать */
 /* ------------------------- */
@@ -48,3 +59,8 @@
 }
 
 /* ------------------------- */
+@media (max-width: 670px){
+    .Quick-access-bar__span{
+        display: none;
+    }
+}

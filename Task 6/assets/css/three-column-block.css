@@ -47,3 +47,31 @@
     color: aliceblue;
     background-color: #f56334;
 }
+@media (max-width:1030px) {
+    .three-column-block__container {
+        width: 865px;
+    }
+}
+@media (max-width:880px) {
+    .three-column-block__container {
+        flex-direction: column;
+        width: 350px;
+        height: 100%;
+    }
+    .three-column-block__column:not(:first-child) {
+        border-top: 3px gray solid;
+        border-left: none;
+    }
+    .three-column-block__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 25vh;
+    }
+    .three-column-block__img {
+        opacity: 0.6;
+        width: 20%;
+    }
+}

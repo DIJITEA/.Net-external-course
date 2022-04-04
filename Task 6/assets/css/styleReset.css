@@ -33,7 +33,7 @@ html {
 
 body {
     min-height: 100vh;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     text-rendering: optimizeSpeed;
     line-height: 1.5;
 }

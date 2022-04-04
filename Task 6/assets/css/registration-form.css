@@ -53,3 +53,19 @@
     width: 90px;
     background-color: #ffdf7f;
 }
+@media (max-width: 688px){
+    .registration-form__content-wrapper {
+        width: 410px;
+    }
+}
+@media (max-width: 570px){
+    .registration-form__content-wrapper {
+        max-width: 230px;
+    }
+    .registration-form__input-item-wrapper--row-direction {
+        flex-direction: column;
+    }
+    .registration-form__input-item-wrapper{
+        margin-bottom: 10px;
+    }
+}

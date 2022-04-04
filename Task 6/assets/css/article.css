@@ -11,3 +11,7 @@
 .article__h2 {
     margin-bottom: 10px;
 }
+
+.article__conten-div--grey {
+    background-color: #4e627a;
+}
