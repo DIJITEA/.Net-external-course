@@ -1,0 +1,17 @@
+.article__conten-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 20px;
+    font: 1em "Fira Sans", sans-serif;
+    font-weight: bold;
+}
+
+.article__h2 {
+    margin-bottom: 10px;
+}
+
+.article__conten-div--grey {
+    background-color: #4e627a;
+}

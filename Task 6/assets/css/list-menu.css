@@ -1,0 +1,13 @@
+.list-menu {
+    width: 200px;
+    list-style-type: none;
+    background-color: #f9e497;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0px #880000;
+}
+
+.list-menu__li-item {
+    color: #880000;
+    margin: 5px;
+}
